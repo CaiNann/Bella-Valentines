@@ -1,0 +1,16 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('assets/valentinesbackground.jpg');
+    position: fixed;
+}
+
+div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50%;
+    height: 300px;
+    outline-color: blueviolet;
+}
