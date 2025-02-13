@@ -1,0 +1,175 @@
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align at the top of the screen */
+    background-color: #5d066e;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: flex-start; /* Align content at the top */
+}
+
+/* Container for both circles, plus sign, and equals sign */
+.container {
+    display: flex;
+    justify-content: center;  /* Horizontally center the items */
+    align-items: center;      /* Vertically center the items */
+    margin-top: 100px;         /* Add margin to move the content slightly down */
+    width: 100vw;
+}
+
+/* Circle container for left and right images */
+.circle {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    transform: scale(0);
+    animation: slideIn 2s ease forwards;
+    border: 8px solid purple;
+}
+
+/* Left circle */
+.left {
+    animation: slideInLeft 2s ease forwards;
+}
+
+/* Right circle */
+.right {
+    animation: slideInRight 2s ease forwards;
+}
+
+/* Image inside the circle */
+.circle-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Plus sign styling */
+.plus-sign {
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+    opacity: 0; /* Start as invisible */
+    animation: fadeIn 2s ease forwards 2s; /* Fade in after images have slid in */
+}
+
+/* Equals sign styling */
+.equals-sign {
+    font-size: 50px; /* Size of the equals sign */
+    font-weight: bold;
+    color: white;
+    opacity: 0; /* Start as invisible */
+    animation: fadeIn 2s ease forwards 2s; /* Fade in after images have slid in */
+    margin-left: 100px; /* Space between the right circle and the equals sign */
+}
+
+/* Question text styling (Valentine?) */
+.question-text {
+    font-size: 100px;
+    font-weight: bold;
+    font-family: cursive;
+    color: white;
+    opacity: 0; /* Start as invisible */
+    animation: fadeInText 2s ease forwards 4s; /* Fade in after equals sign */
+    text-align: center; /* Center the text */
+    margin-top: 75px; /* Add space between the animated elements and the Valentine text */
+    margin-left: 210px;
+}
+
+/* Button container */
+.buttons-container {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    margin-top: 20px; /* Space between question text and buttons */
+    margin-left: 620px;
+    opacity: 0;
+    animation: fadeInButtons 2s ease forwards 6s;
+}
+
+/* Button styling */
+button {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+/* Yes button */
+.yes-button {
+    background-color: purple; /* Green color */
+    color: white;
+}
+
+.yes-button:hover {
+    background-color: white; /* Darker green on hover */
+}
+
+/* No button */
+.no-button {
+    background-color: purple; /* Red color */
+    color: white;
+}
+
+.no-button:hover {
+    background-color: white; /* Darker red on hover */
+}
+
+/* Animation for sliding in from the left */
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-150vw);
+    }
+    100% {
+        transform: translateX(-4vw);
+    }
+}
+
+/* Animation for sliding in from the right */
+@keyframes slideInRight {
+    0% {
+        transform: translateX(150vw);
+    }
+    100% {
+        transform: translateX(4vw);
+    }
+}
+
+/* Animation for fading in the plus sign and equals sign */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Animation for fading in the question text */
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Animation for fading in the buttons */
+@keyframes fadeInButtons {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

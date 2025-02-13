@@ -1,16 +1,29 @@
+/* Make the body take up the full viewport height */
 body {
+    background-image: url('./assets/valentinesbackground.jpg');
+    height: 100vh;
+    margin: 0;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: url('assets/valentinesbackground.jpg');
-    position: fixed;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center;     /* Centers content vertically */
+    font-family: Arial, sans-serif; /* Optional, for better font */
 }
 
-div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 50%;
-    height: 300px;
-    outline-color: blueviolet;
+.content {
+    padding: 20px 40px;        /* Add padding around the text */
+    font-size: 24px;            /* Adjust font size */
+    background-color: #cf1212; /* Button background color */
+    color: white;              /* Text color */
+    border: none;              /* Remove default border */
+    border-radius: 8px;        /* Rounded corners */
+    cursor: pointer;          /* Show pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    text-align: center;        /* Center the text inside the div */
+    font-family: cursive;
+    text-decoration: none;
+}
+
+/* Darken the button on hover */
+.content:hover {
+    background-color: purple; /* Darker shade of green */
 }
